@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+echo 'I am gonna set up eslint.'
+
+
+echo 'installing eslint npm package'
+npm install --save-dev eslint
+
+
+echo 'installing plugins for semistandard thru npm'
+npm install --save-dev eslint-plugin-promise eslint-plugin-standard eslint-plugin-react
+npm install --save-dev eslint-config-standard eslint-plugin-standard eslint-config-semistandard
+npm install --save-dev eslint-config-semistandard
+
+
+echo 'creating a .eslintrc.js file'
+echo 'module.exports = {
+  "extends": "eslint-config-semistandard"
+}' > .eslintrc.js
+
+echo 'done. code away'
